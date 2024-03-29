@@ -5,12 +5,15 @@ import java.time.LocalDate;
 import org.hibernate.annotations.GeneratorType;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class PostDetailsAndUserDetails {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int pid;
 	private LocalDate date;
 	private String post;
@@ -105,6 +108,7 @@ public class PostDetailsAndUserDetails {
 
 	public void setRole(String role) {
 		this.role = role;
+		
 	}
 
 

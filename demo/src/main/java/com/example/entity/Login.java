@@ -78,9 +78,9 @@ public class Login {
 		this.role = role;
 	}
 
-	public List<Feeds> getFeed() {
-		return feed;
-	}
+//	public List<Feeds> getFeed() {
+//		return feed;
+//	}
 
 	
 	public void setFeed(List<Feeds> feed) {
@@ -101,6 +101,12 @@ public class Login {
 	public Login() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Login [id=" + id + ", username=" + username + ", password=" + password + ", emailid=" + emailid
+				+ ", moNo=" + moNo + ", role=" + role + ", feed=" + feed + "]";
 	}
 
 	

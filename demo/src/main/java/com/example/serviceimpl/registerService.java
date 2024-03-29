@@ -16,6 +16,7 @@ public interface registerService {
 	void deleteById(int id);
 	
 	public Login getById(int id);
-	List<Login> getUserByName(String name);
+	Login getUserByName(String name);
+	List<Login> getUserAllPost();
 	
 }

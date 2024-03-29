@@ -27,13 +27,19 @@ public class registerImpl implements registerService {
 	}
 	
 	@Override
-	public List<Login> getUserByName(String name) {
+	public Login getUserByName(String name) {
 		// TODO Auto-generated method stub
 		return regirepo.listtype(name);
 //		return null;
 		
 	}
 
+	@Override
+	public List<Login> getUserAllPost() {
+		// TODO Auto-generated method stub
+		return regirepo.findAll();//		return null;
+		
+	}
 	
 	@Override
 	public void AddUser(Login login) {

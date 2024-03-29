@@ -133,7 +133,16 @@ public class Feeds {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+
+
+
+
+//	@Override
+//	public String toString() {
+//		return "Feeds [feedId=" + feedId + ", id=" + id + ", post=" + post + ", name=" + name + ", date=" + date
+//				+ ", registerlog=" + registerlog + "]";
+//	}
+//	
 	
 	
 	

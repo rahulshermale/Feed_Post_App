@@ -30,7 +30,7 @@ public class FeedsImplementation implements FeedsService{
 			System.out.println(regirepo.existsById(id));
 			System.err.println("Helllo....3......."+ id);
         
-        if (optionalLogin.isPresent()) {
+            if (optionalLogin.isPresent()) {
         	System.err.println("Helllo....4......."+ id++ );
             // If Login entity exists, set it as the registerlog for the Feeds entity
             Login login = optionalLogin.get();

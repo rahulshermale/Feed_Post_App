@@ -22,7 +22,7 @@ public class FeedsController {
 	@Autowired
 	private FeedsImplementation feedimpl;
 
-	@GetMapping(value = "/api/getpost")
+	@GetMapping(value = "/api/getfeed")
 	public List<Feeds> getAllPost() {
 		// TODO Auto-generated method stub
 		return feedimpl.getAllPost();
@@ -44,7 +44,7 @@ return null;
 		return feedimpl.findAllUsersWithAddress();
 	}
 
-	@PostMapping("api/addpost/{id}")
+	@PostMapping("api/addpostfeed/{id}")
 	public void addPost(@RequestBody Feeds feed,@PathVariable int id) {
 		
 		System.err.println("Helllo..........."+ id );

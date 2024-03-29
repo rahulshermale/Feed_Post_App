@@ -27,7 +27,7 @@ public interface RegisterRepo extends JpaRepository<Login, Integer> {
 	Optional<Login> findByUsername(@Param("username") String username);
 
 	@Query(value = "select * from login p where p.username=:name", nativeQuery = true)
-	List<Login> listtype(@Param("name") String name);
+	Login listtype(@Param("name") String name);
 
 	@Query(value="select * from login l where l.id=:id",nativeQuery = true)
 	Login findAllByyId(int id);
