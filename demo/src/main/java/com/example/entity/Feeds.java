@@ -4,6 +4,7 @@ package com.example.entity;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 //import java.sql.Date;
 
@@ -35,8 +36,9 @@ public class Feeds {
 
 	  @ManyToOne
 	  @JoinColumn(name = "log_id" , nullable = false)
+//	  @JsonManagedReference
 	  private Login registerlog;
-
+	// registerlog map with the login Table log_id created inside feeds table
 	  
 	  
 	  

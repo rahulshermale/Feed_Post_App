@@ -3,6 +3,8 @@ package com.example.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,13 +28,15 @@ public class Login {
 	private String emailid;
 	private Long moNo;
 	private String role;
-	
+			//registerlog map with the feeds Table with log_id
 	@OneToMany(mappedBy = "registerlog", cascade = CascadeType.ALL)
+//	  @JsonBackReference
     private List<Feeds> feed ;//= new ArrayList<>();
 
 	public int getId() {
 		return id;
 	}
+	
 
 	public void setId(int id) {
 		this.id = id;

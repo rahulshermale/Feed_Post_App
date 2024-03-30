@@ -3,6 +3,7 @@ package com.example.serviceimpl;
 import java.util.List;
 
 import com.example.entity.Feeds;
+import com.example.entity.PostDetailsAndUserDetails;
 
 public interface FeedsService {
 
@@ -19,5 +20,9 @@ public interface FeedsService {
 	public void deletAllPost();
 
 	List<Feeds> getUserByName(int id);
+
+	Feeds getUserByID(int id);
+
+	PostDetailsAndUserDetails getUserByjoin(int id);
 }
 

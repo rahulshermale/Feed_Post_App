@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entity.Feeds;
 import com.example.entity.Login;
+import com.example.entity.PostDetailsAndUserDetails;
 import com.example.serviceimpl.FeedsImplementation;
 
 @RestController
@@ -48,12 +50,17 @@ return null;
 	public void addPost(@RequestBody Feeds feed,@PathVariable int id) {
 		
 		System.err.println("Helllo..........."+ id );
+	
 		
-		// TODO Auto-generated method stub
+	 			
+		 			
+		 			
+		 			
+		 			
+///////////////////////////////////////////////////////////////////////////////		 			
 		
 		feedimpl.addPost(feed,id);
-//		System.err.println(id++);
-//		return "End";
+
 	}
 	
 	
@@ -87,10 +94,19 @@ return null;
 	
 	
 
-	 @GetMapping(value = "api/getallfeed/{id}")
-	 public List<Feeds> getUserbyid(@PathVariable int id)
+	 @PostMapping(value = "api/getalljoin/{id}")
+	 public PostDetailsAndUserDetails getUserbyid(@PathVariable int id)
 	 {
-		return feedimpl.getUserByName(id);
+		 
+		 System.out.println("The Id Is "+ id);
+		 
+		 System.err.println("Helllo Rahul");
+		 
+		 
+		return feedimpl.getUserByjoin(id);
 	 }
+	 
+	 
+	 
 	
 }

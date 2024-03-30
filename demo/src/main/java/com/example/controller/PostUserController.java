@@ -92,9 +92,13 @@ public class PostUserController {
 
 		}
 		@PostMapping("/api/addpostuser/{id}")
-		public void registerfeed(@RequestBody PostDetailsAndUserDetails login) { 
+		public void registerfeed(@PathVariable int id ,@RequestBody PostDetailsAndUserDetails login) { 
 			
 			System.err.println(1);
+			
+			
+			
+			
 			
 			postuserService.AddUser(login);
 //			System.err.println(login.toString());

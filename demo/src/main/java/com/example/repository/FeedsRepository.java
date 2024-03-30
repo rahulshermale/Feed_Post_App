@@ -27,7 +27,8 @@ public interface FeedsRepository  extends JpaRepository<Feeds, Integer>{
 	 @Query(value = "select * from Feeds p where p.id=:id", nativeQuery = true)
 		List<Feeds> listtype(@Param("id") int id);
 	
-	 
+	 @Query(value="select f.*,l.* from Feeds f,login l where f.id=:id ",nativeQuery=true)
+	 Feeds getDataFeedLogin(@Param("id") int id);
 	 
 	 
 //	@Query("update feeds f set f.name = :name, f.post= :post, where f.id = :id" )
